@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.Savenko.view.CurrencyAppController">
+   <children>
+      <AnchorPane layoutY="142.0" prefHeight="350.0" prefWidth="700.0" style="-fx-background-color: #fffaf0;">
+         <children>
+            <TableView fx:id="table" layoutY="-66.0" prefHeight="425.0" prefWidth="750.0">
+              <columns>
+                  <TableColumn fx:id="id" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="ID" />
+                <TableColumn fx:id="value" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Value" />
+                <TableColumn fx:id="nominal" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Nominal" />
+                  <TableColumn fx:id="name" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Name" />
+                  <TableColumn fx:id="code" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Code" />
+                  <TableColumn fx:id="date" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Date" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <Button fx:id="update" layoutX="667.0" layoutY="21.0" mnemonicParsing="false" onAction="#update" text="Update" />
+      <MenuBar layoutX="8.0" layoutY="20.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Export">
+            <items>
+              <MenuItem fx:id="CSV" mnemonicParsing="false" onAction="#exportCSV" text="CSV" />
+                  <MenuItem fx:id="json" mnemonicParsing="false" onAction="#exportJSON" text="JSON" />
+            </items>
+          </Menu>
+          <Menu fx:id="help" mnemonicParsing="false" onAction="#printAbout" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
